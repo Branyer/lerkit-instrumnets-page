@@ -1,11 +1,19 @@
 .navbar {
     align-items: center;
     background-color: $primary-color;
-    border-bottom: 2px dotted black;
+    border-bottom: 2px solid black;
     display: flex;
     height: 70px;
     justify-content: space-around;
+    left: 0;
+    position: fixed;
+    top:0; 
     width: 100%;
+    z-index: 1000;
+
+    .fa-bars {
+        display: none;
+    }
 
     .navbar__logo--link {
         height: 70%;

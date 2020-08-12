@@ -1,0 +1,40 @@
+@media (max-width:500px) {
+    .navbar {
+
+        .navbar__menu {
+            transform: translate(100%);
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            right: 0%;
+            background-color: $primary-color;
+            border: 3px solid black;
+            padding: 3px;
+            transition: all 0.5s ease;
+
+            .menu__item, .menu__item--dropdown{
+                margin: 10px;
+                border: none;
+            }
+
+            .menu__item--dropdown {
+                .dropdown-menu {
+
+                    left: -100%;
+                }
+            }
+            
+        }
+    
+        .fa-bars {
+            display: block ;
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    :root {
+        font-size: 13px;
+    }
+}

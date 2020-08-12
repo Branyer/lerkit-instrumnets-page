@@ -1,0 +1,17 @@
+.contact {
+    min-height: 20vh;
+    height: fit-content;
+    background-color: black;
+    display: grid;
+    place-items: center;
+    p {
+        text-align: center;
+        color: white;
+        font-weight: 600;
+        font-size: 1.3rem;
+
+        span {
+            color: $primary-color;
+        }
+    }
+}

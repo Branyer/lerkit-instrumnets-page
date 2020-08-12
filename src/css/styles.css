@@ -12,11 +12,19 @@ html, body {
 .navbar {
   align-items: center;
   background-color: orange;
-  border-bottom: 2px dotted black;
+  border-bottom: 2px solid black;
   display: flex;
   height: 70px;
   justify-content: space-around;
+  left: 0;
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 1000;
+}
+
+.navbar .fa-bars {
+  display: none;
 }
 
 .navbar .navbar__logo--link {
@@ -78,4 +86,184 @@ html, body {
 
 .navbar .menu__item--dropdown:hover .dropdown-menu {
   opacity: 1;
+}
+
+.header {
+  background-image: url("bg-header-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: grid;
+  height: 80vh;
+  margin-top: 70px;
+  place-items: center;
+  width: 100%;
+}
+
+.header .header__title {
+  background-color: rgba(255, 166, 0, 0.473);
+  border: 1px solid black;
+  color: white;
+  font-size: 2rem;
+  margin: 0px 10%;
+  padding: 10px  5%;
+  text-align: center;
+  text-shadow: 1px 5px  1px black;
+}
+
+.slider {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+  display: grid;
+  background-color: black;
+  place-items: center;
+}
+
+.slider .container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 60vh;
+  width: 70vw;
+  margin: 10px;
+  margin-top: 30px;
+}
+
+.slider .container .slide {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  transition: all 2s ease;
+  opacity: 0;
+  box-shadow: 0px 0px 10px white;
+  border: 1px solid black;
+}
+
+.slider .container .selected {
+  transform: translate(0%);
+  opacity: 1;
+}
+
+.slider .container .next {
+  transform: translate(-110%);
+  opacity: 0;
+}
+
+.slider .container .previous {
+  transform: translate(110%);
+  opacity: 0;
+}
+
+#section {
+  height: fit-content;
+  min-height: 70vh;
+}
+
+.aplications__title {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 2.5rem;
+  color: orange;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.aplications {
+  display: grid;
+  place-items: center;
+  min-height: 50vh;
+  height: fit-content;
+  padding-bottom: 100px;
+}
+
+.aplications .aplications__container {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  min-height: 50vh;
+  height: fit-content;
+}
+
+.aplications .aplication {
+  flex-basis: 350px;
+  flex-grow: 1;
+  flex-basis: 1;
+  min-width: 300px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.aplications .aplication h3 {
+  color: orange;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.aplications .aplication p {
+  text-align: center;
+}
+
+.contact {
+  min-height: 20vh;
+  height: fit-content;
+  background-color: black;
+  display: grid;
+  place-items: center;
+}
+
+.contact p {
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.contact p span {
+  color: orange;
+}
+
+.footer {
+  min-height: 10vh;
+  height: fit-content;
+  display: grid;
+  place-items: center;
+  background-color: orange;
+}
+
+@media (max-width: 500px) {
+  .navbar .navbar__menu {
+    transform: translate(100%);
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    background-color: orange;
+    border: 3px solid black;
+    padding: 3px;
+    transition: all 0.5s ease;
+  }
+  .navbar .navbar__menu .menu__item, .navbar .navbar__menu .menu__item--dropdown {
+    margin: 10px;
+    border: none;
+  }
+  .navbar .navbar__menu .menu__item--dropdown .dropdown-menu {
+    left: -100%;
+  }
+  .navbar .fa-bars {
+    display: block;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  :root {
+    font-size: 13px;
+  }
 }
