@@ -24,17 +24,14 @@
         }
 
         .selected {
-            transform: translate(0%);
             opacity: 1;
-        }
+        } 
 
         .next {
-            transform: translate(-110%);
             opacity: 0;
         }
 
         .previous {
-            transform: translate(110%);
             opacity: 0;
         }
     }

@@ -142,17 +142,14 @@ html, body {
 }
 
 .slider .container .selected {
-  transform: translate(0%);
   opacity: 1;
 }
 
 .slider .container .next {
-  transform: translate(-110%);
   opacity: 0;
 }
 
 .slider .container .previous {
-  transform: translate(110%);
   opacity: 0;
 }
 
